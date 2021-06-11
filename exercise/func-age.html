@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나이 계산 프로그램</title>
+</head>
+<body>
+    <h2>나이 계산하기</h2>
+    <p id="show"></p>
+    <button onclick="calc()">계산하기</button>
+    <script>
+        function calc(){
+            
+            const currnetYear = 2021; //const => 상수 표시 키워드, 변하지 않는수 
+            var birthYear = prompt("출생년도를 입력하세요" , "yyyy");
+            var age = currnetYear - birthYear + 1;
+            // var msg = "당신의 나이는 " + age + "세입니다.";
+
+            document.getElementById("show").innerHTML = "당신의 나이는 " + age + "세입니다."; //=msg;
+        }
+    </script>
+</body>
+</html>
