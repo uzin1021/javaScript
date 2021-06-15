@@ -1,0 +1,14 @@
+#item{
+    width: 500px;
+    margin: 0 auto; /*가운데 정렬*/
+    position: relative;
+}
+.over{
+    position: absolute;
+    left: 20px;
+    top:270px;
+}
+.text{
+    width: 400px;
+    display: none; /*텍스트 숨기기*/
+}
