@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>랜덤 이벤트 추첨</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        h1{
+            display: inline-block;
+            background-color: #eee;
+            border: 2px solid #ccc;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>당첨자 발표</h1>
+    <script>
+        var seed = prompt("전체 응모자 수 : ", "");
+        // function picked(){
+        var picked = Math.floor(Math.random()*seed+1);
+            // return picked;
+            
+        /* for(i=1; i<=100; i++){
+            document.write((picked));
+        } */
+        document.write("<p>전체 응모자 수 : "  + seed +"명</p>");
+        document.write("<p>당첨자 : " + picked +" 번</p>" );
+    </script>
+</body>
+</html>

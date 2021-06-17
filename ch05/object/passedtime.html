@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>날짜 계산 프로그램</title>
+    <style>
+        #container{
+            border:1px solid black;
+            margin: 50px;
+            width: 200px;
+            height: 200px;
+            padding: 50px;
+            border-radius: 50%;
+            background-color: skyblue;
+        }
+        h1{
+            padding-top: 10px; 
+            color: black;
+            font-weight: 200;
+            text-align: center;
+        }
+        h1, p{
+            text-align: center;
+        }
+        #result{
+            text-align: center;
+            color: red;
+            font-size: 40px;
+            font-family: 돋움;
+        }
+    </style>
+</head>
+<body>
+    <div id ="container">
+        <h1><b>책읽기</b></h1>
+        <p><span id = "result"></span><b>일 연속으로<br>책 읽기를 달성했군요.</b></p>
+        <p><b>축하합니다.</b></p>
+    </div>
+    <script>
+        //지나온 날짜 = 현재 날짜(now) - 독서를 시작한 날짜("2021-05-27")
+        var now = new Date();
+        var firstDay = new Date("2021-05-27")
+
+        var passedTime = now.getTime() - firstDay.getTime();
+        passedTime = Math.round((passedTime)/(24*60*60*1000));
+        //1907.1.1 자정 이후 시간 - 밀리초로 계산됨
+
+        document.getElementById("result").innerHTML = passedTime;
+    </script>
+</body>
+</html> 
